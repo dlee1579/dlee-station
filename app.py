@@ -6,7 +6,7 @@ import urllib
 import requests
 from pytz import timezone
 from datetime import datetime
-from constants import API_ACCESS_KEY, PRIMARY_LINE, DIRECTION_MAP
+from backend.constants import API_ACCESS_KEY, PRIMARY_LINE, DIRECTION_MAP
 
 app = Flask(__name__)
 cors = CORS(app)

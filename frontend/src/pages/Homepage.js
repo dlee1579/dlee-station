@@ -1,7 +1,5 @@
 import Banner from "../components/Banner";
 import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-// import Jumbotron from 'react-bootstrap/Jumbotron';
 import React, { useState, useEffect, useRef } from 'react';
 import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
@@ -39,22 +37,6 @@ const Homepage = () => {
         fetchTrainUpdates();
         return ()=> clearInterval(fetchDataIntervalId.current);
     }, [fetchDataTrigger]);
-
-    const setFetchDataInterval = (interval) => {
-        // Clear old interval
-        if (fetchDataIntervalId.current) {
-          clearInterval(fetchDataIntervalId.current);
-          fetchDataIntervalId.current = undefined;
-        }
-    
-        // Set new interval
-        if (interval > 0) {
-          fetchDataIntervalId.current = setInterval(() => {
-            setFetchDataTrigger(Date.now());
-          }, interval);
-        }
-      };
-
 
     const lineStyle = {
         backgroundColor: 'gray',
